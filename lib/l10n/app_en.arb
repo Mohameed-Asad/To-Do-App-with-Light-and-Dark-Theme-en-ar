@@ -1,0 +1,21 @@
+{
+  "languages": "Languages",
+  "welcomeBack": "Welcome Back!",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "or": "OR",
+  "createNewAcc": "Create New Account!",
+  "createAcc": "Create Account",
+  "name": "Full Name",
+  "nameHint": "Enter Your Full Name",
+  "emailHint": "Enter Your Email address",
+  "passwordHint": "Enter Your Password",
+  "againPassword": "Confirm Password",
+  "confirmPassword": "Confirm Your Password",
+  "settings": "Settings",
+  "todoTitle": "To Do List",
+  "loginSuccess": "Logged in Successfully",
+  "createdSuccess": "Account successfully created",
+  "themeMode": "Theme Mode"
+}

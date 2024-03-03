@@ -1,0 +1,21 @@
+{
+  "languages": "اللغة",
+  "welcomeBack": "مرحبا بعودتك !",
+  "email": "الحساب",
+  "password": "كلمة السر",
+  "login": "تسجيل الدخول",
+  "or": "أو",
+  "createNewAcc": "إنشاء حساب جديد!",
+  "createAcc": "إنشاء حساب",
+  "name": "الإسم",
+  "nameHint": "قم بكتابة أسمك",
+  "emailHint": "قم بإدخال البريد الإلكتروني",
+  "passwordHint": "قم بكتابة كلمة السر",
+  "againPassword": "تأكيد كلمة السر",
+  "confirmPassword": "قم بإعادة كتابة كلمة السر",
+  "settings": "الإعدادات",
+  "todoTitle": "قائمة المهام",
+  "loginSuccess": "تم تسجيل الدخول بنجاح",
+  "createdSuccess": "تم إنشاء الحساب بنجاح",
+  "themeMode": "السمة"
+}
