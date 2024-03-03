@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/core/config/app_settings/settings_manager.dart';
-import 'package:todo_app/features/layout_view.dart';
 import 'package:todo_app/features/login/pages/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
