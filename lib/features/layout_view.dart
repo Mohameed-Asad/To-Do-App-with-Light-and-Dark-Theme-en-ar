@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/core/models/bottom_sheet.dart';
+import 'package:todo_app/features/tasks_view/widgets/bottom_sheet.dart';
+
 import '../core/config/app_settings/settings_manager.dart';
 
 class LayoutView extends StatelessWidget {

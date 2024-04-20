@@ -8,7 +8,8 @@ import 'package:todo_app/core/date_time.dart';
 import 'package:todo_app/core/models/task_model.dart';
 import 'package:todo_app/core/services/snakebar_service.dart';
 import 'package:todo_app/core/widget/custom_text_form_field.dart';
-import 'package:todo_app/features/firebase_settings/firebase_utils.dart';
+
+import '../../../core/firebase_settings/firebase_utils.dart';
 
 class BottomSheetModel extends StatefulWidget {
   const BottomSheetModel({super.key});
@@ -32,7 +33,7 @@ class _BottomSheetModelState extends State<BottomSheetModel> {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: vm.isDark() ? Colors.white10 : Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(25), topRight: Radius.circular(25)),
       ),
       child: Form(

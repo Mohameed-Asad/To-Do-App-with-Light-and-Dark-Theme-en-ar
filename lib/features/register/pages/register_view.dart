@@ -1,23 +1,28 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:todo_app/core/services/snakebar_service.dart';
-import 'package:todo_app/features/firebase_settings/firebase_utils.dart';
-import 'package:todo_app/features/login/pages/login_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:todo_app/core/services/snakebar_service.dart';
+import 'package:todo_app/features/login/pages/login_screen.dart';
+
 import '../../../core/config/constants/application_theme_manager.dart';
+import '../../../core/firebase_settings/firebase_utils.dart';
 import '../../../core/widget/custom_text_form_field.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   static const String routeName = "Register Page";
 
+  const RegisterPage({super.key});
+
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmController = TextEditingController();
-
-  RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +59,7 @@ class RegisterPage extends StatelessWidget {
                     controller: _nameController,
                     hint: loocal.nameHint,
                     hintColor: Colors.grey,
-                    suffixWidget: Icon(Icons.person),
+                    suffixWidget: const Icon(Icons.person),
                     onValidate: (value) {
                       if (value == null || value.trim().isEmpty) {
                         return loocal.nameHint;
@@ -74,7 +79,7 @@ class RegisterPage extends StatelessWidget {
                     controller: _emailController,
                     hint: loocal.emailHint,
                     hintColor: Colors.grey,
-                    suffixWidget: Icon(Icons.email),
+                    suffixWidget: const Icon(Icons.email),
                     onValidate: (value) {
                       if (value == null || value.trim().isEmpty) {
                         return loocal.emailHint;
@@ -147,7 +152,7 @@ class RegisterPage extends StatelessWidget {
                         if (globalKey.currentState!.validate()) {
                           FirebaseUtils()
                               .createNewAccount(_emailController.text,
-                                  _passwordController.text)
+                              _passwordController.text)
                               .then((value) {
                             if (value == true) {
                               EasyLoading.dismiss();

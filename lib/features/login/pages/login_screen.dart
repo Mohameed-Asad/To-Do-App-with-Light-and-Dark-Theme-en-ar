@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:todo_app/core/config/constants/application_theme_manager.dart';
 import 'package:todo_app/core/services/snakebar_service.dart';
 import 'package:todo_app/core/widget/custom_text_form_field.dart';
-import 'package:todo_app/features/firebase_settings/firebase_utils.dart';
 import 'package:todo_app/features/layout_view.dart';
 import 'package:todo_app/features/register/pages/register_view.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class LoginScreen extends StatelessWidget {
+import '../../../core/firebase_settings/firebase_utils.dart';
+
+class LoginScreen extends StatefulWidget {
   static const String routeName = "Login Screen";
 
+  const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
-  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                         if (globalKey.currentState!.validate()) {
                           FirebaseUtils()
                               .signIn(_emailController.text,
-                                  _passwordController.text)
+                              _passwordController.text)
                               .then((value) {
                             if (value == true) {
                               EasyLoading.dismiss();

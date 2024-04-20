@@ -1,11 +1,11 @@
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/core/config/app_settings/settings_manager.dart';
-import 'package:todo_app/core/date_time.dart';
-import 'package:todo_app/features/firebase_settings/firebase_utils.dart';
 import 'package:todo_app/features/tasks_view/widgets/task_filed.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../../core/firebase_settings/firebase_utils.dart';
 
 class TasksScreen extends StatefulWidget {
   const TasksScreen({super.key});
@@ -27,7 +27,7 @@ class _TasksScreenState extends State<TasksScreen> {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 65),
-          child: Stack(alignment: Alignment(0, 2.1), children: [
+          child: Stack(alignment: const Alignment(0, 2.1), children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
               width: mediaQuery.width,

@@ -6,8 +6,9 @@ import 'package:provider/provider.dart';
 import 'package:todo_app/core/config/app_settings/settings_manager.dart';
 import 'package:todo_app/core/models/task_model.dart';
 import 'package:todo_app/core/services/snakebar_service.dart';
-import 'package:todo_app/features/firebase_settings/firebase_utils.dart';
+
 import '../../../core/config/constants/application_theme_manager.dart';
+import '../../../core/firebase_settings/firebase_utils.dart';
 
 class TaskField extends StatelessWidget {
   final TaskModel taskModel;
